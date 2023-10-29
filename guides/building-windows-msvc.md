@@ -8,26 +8,9 @@ The toolchain is used commercially as well, and can be used to integrate Objecti
 
 Before we can start building, we need to install some dependencies. We will be using [Chocolatey](https://chocolatey.org/) to install them.
 
-### 1.1 Installing Visual Studio 2022
+Follow the guide on installing Visual Studio, and the Windows SDK from the [Windows Development Workflow](./windows-dev-workflow.md) guide.
 
-As we use native Windows APIs, and the MSVC compiler for some projects, you will need to install Visual Studio 2022.
-For this guide, we will be using the Community Edition, but you can use any edition you want.
-
-Goto [Visual Studio 2022 Downloads](https://visualstudio.microsoft.com/downloads/) and download the installer, or
-use chocolatey:
-
-```sh
-choco install visualstudio2022community
-```
-
-In the installer, select the _workload_ `Desktop development with C++`, and the following optional packages:
-- MSVC vXXX - VS 2022 C++ x64/x86 build tools
-- Windows 10 SDK or Windows 11 SDK
-
-Here is a screenshot of the installer:
-![[Workload Selection Screen]](assets/visualstudio2022-installer.png)
-
-### 1.2 Installing other dependencies
+### 1.1 Installing other dependencies
 
 Now install the following dependencies using chocolatey:
 
@@ -42,7 +25,7 @@ MSYS2 is a software distribution and a development platform for Windows, providi
 Unix-like environment, a package management system (based on pacman), and tools
 for bridging Windows idiosyncrasies with the Unix world.
 
-### 1.3 Installing msys2 packages
+### 1.2 Installing msys2 packages
 
 Now we need to install some packages using pacman, the package manager of MSYS2.
 Open a MSYS2 shell (Windows + R -> msys2.exe), and run the following commands:
