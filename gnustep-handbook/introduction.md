@@ -1,0 +1,70 @@
+---
+title: "GNUstep Developer's Handbook"
+author: [Hugo Melder]
+date: "16th December 2023"
+keywords: [Objective-C, GNUstep, Introduction, Development]
+lang: en
+book: true
+toc: true
+
+fontsize: 12pt
+mainfont: EB Garamond
+sansfont: Inter
+monofont: "IBM Plex Mono"
+...
+
+
+# Chapter 1. Introduction
+
+## 1.1 What is GNUstep?
+GNUstep is an open-source implementation of the core Objective-C libraries used
+in macOS, including _libobjc_, _Foundation_, and _AppKit_. It's part of a
+broader endeavor to create a free software parallel to
+the closed, proprietary environment you're accustomed to with Apple.
+
+If you are new to Objective-C, checkout the [Objective-C 2.0](objc2.md) page.
+
+One of the foundational ideas behind GNUstep is its ability to target multiple
+platforms, liberating applications from being confined to a single ecosystem.
+
+To give you an idea, GNUstep with Objective-C 2.0 has native support for
+Linux, FreeBSD, OpenBSD, Android, and macOS.
+
+Here's a bit of historical context: GNUstep descends from the original OpenStep
+project, a joint venture by NeXT (Steve Jobs's company between his Apple
+stints) and Sun Microsystems in the '90s. OpenStep was an innovative framework,
+defining an object-oriented API around Objective-C for developing
+cross-platform software. When Apple bought NeXT,
+they adopted this as the foundation of their new OS, which eventually evolved
+into macOS. The Cocoa framework you use on macOS/iOS is, in essence, Apple's
+proprietary evolution of the original OpenStep.
+
+## 1.2 What is implemented?
+
+The following table lists mature GNUstep projects, and their non-free counterparts.
+For more information, check out the respective project documentation.
+
+| Project | Known as         | Description                                                                                      |
+| --------------- | ------------------- | ------------------------------------------------------------------------------------------------ |
+| libobjc2        | Objective-C Runtime | Objective-C runtime library intended for use with Clang with all modern Objective-C 2.0 features |
+| base            | Foundation          | General-purpose, non-graphical Objective C objects                                               |
+| corebase        | Core Foundation      | Non-graphical objects based on the CF API.                                                       |
+| gui             | AppKit              | Library of graphical user interface classes                                                      |
+| back            | -                   | Rendering backend for AppKit (GNUstep abstracts drawing from backends)                           |
+
+## 1.3 Getting Started
+
+If you are interested in developing with GNUstep you should start by installing
+it onto your favourite operating system. Below are operating system specific
+installation guides.
+
+```Objective-C
+#import <Foundation/Foundation.h>
+
+int main(int argc, char *argv[]) {
+	// This is a very long comment that exceeds the typical range of one line but I will continue as this is a long comment
+	@autoreleasepool{
+		NSLog(@"Hello World with a %@", @0);
+	}
+}
+```
